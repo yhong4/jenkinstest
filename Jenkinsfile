@@ -19,5 +19,14 @@ pipeline {
                 }
             }
         }
+        stage ('Deploy') {
+            steps {
+                withPythonEnv('/usr/bin/python3.7') {
+                    sh """
+                        sls deploy
+                    """
+                }
+            }
+        }
     } 
 }
