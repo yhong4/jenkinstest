@@ -1,4 +1,4 @@
-#!/Users/apple/Desktop/job/project/backend/okmath-lambda/okmath/venv/bin/python3
+#!/Users/apple/Desktop/job/project/backci/okmath-backcicd/venv/bin/python3.8
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -1,4 +1,4 @@
-#!/Users/apple/Desktop/job/project/backend/okmath-lambda/okmath/venv/bin/python
+#!/Users/apple/Desktop/job/project/backci/okmath-backcicd/venv/bin/python
 
 import sys
 import getopt
