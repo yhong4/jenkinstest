@@ -1,5 +1,7 @@
 pipeline {
     agent any
+
+
     stages {
         stage ('Install_Requirements') {
             steps {
@@ -12,7 +14,7 @@ pipeline {
                         virtualenv venv
                         #. venv/bin/activate
                         pip install --upgrade pip
-                        pip install -r requirements.txt -r dev-requirements.txt
+                        pip install -r requirements.txt
                         make clean
                     """
                 }
