@@ -24,6 +24,7 @@ pipeline {
                 withPythonEnv('/usr/bin/python3.7') {
                     sh """
                         python test.py
+                        node test.js
                         sls deploy
                     """
                 }
