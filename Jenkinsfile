@@ -1,9 +1,19 @@
 pipeline {
     agent { docker { image 'python:3.8'}}
     stages {
-        stage('build') {
+        stage ('Install_Requirements') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh """
+                    echo ${SHELL}
+                    [ -d venv ] && rm -rf venv
+                    #virtualenv --python=python3.8 venv
+                    virtualenv venv
+                    #. venv/bin/activate
+                    export PATH=${VIRTUAL_ENV}/bin:${PATH}
+                    pip install --upgrade pip
+                    pip install -r requirements.txt -r dev-requirements.txt
+                    make clean
+                """
             }
         }
     } 
