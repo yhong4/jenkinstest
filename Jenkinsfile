@@ -23,6 +23,7 @@ pipeline {
             steps {
                 withPythonEnv('/usr/bin/python3.7') {
                     sh """
+                        python test.py
                         sls deploy
                     """
                 }
