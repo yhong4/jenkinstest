@@ -6,6 +6,7 @@ pipeline {
                 sh """
                     echo ${SHELL}
                     [ -d venv ] && rm -rf venv
+                    pip install virtualenv
                     #virtualenv --python=python3.8 venv
                     virtualenv venv
                     #. venv/bin/activate
