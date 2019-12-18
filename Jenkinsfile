@@ -8,7 +8,7 @@ pipeline {
                         echo ${SHELL}
                         [ -d venv ] && rm -rf venv
                         pip install virtualenv
-                        #virtualenv --python=python3.8 venv
+                        #virtualenv --python=python3.7 venv
                         virtualenv venv
                         #. venv/bin/activate
                         pip install --upgrade pip
