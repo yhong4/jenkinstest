@@ -25,9 +25,14 @@ pipeline {
                 sh """
                     npm install
                     npm install -g serverless
-                    sls deploy
+                    sls deploy --stage dev
                 """
             }
         }
     } 
+
+     environment {
+	 		AWS_ACCESS_KEY_ID = credentials('AKIAWDNCMCBINHHPGHNA')
+			AWS_SECRET_ACCESS_KEY = credentials('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')
+	 }
 }
