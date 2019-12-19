@@ -25,7 +25,7 @@ provider:
   runtime: python3.7
   stage: dev
   region: ap-southeast-2
-
+  cfnRole: arn:aws:iam::419636711504:instance-profile/jenkins_ec2
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
