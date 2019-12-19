@@ -22,7 +22,7 @@ org: zihangs
 
 provider:
   name: aws
-  runtime: python3.8
+  runtime: python3.7
   stage: dev
   region: ap-southeast-2
 
