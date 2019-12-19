@@ -23,8 +23,7 @@ pipeline {
             tools {nodejs "okmath-nodejs"}
             steps {
                 sh """
-                    python test.py
-                    node test.js
+                    sls deploy
                 """
             }
         }
