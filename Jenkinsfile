@@ -22,12 +22,10 @@ pipeline {
         stage ('Deploy') {
             tools {nodejs "okmath-nodejs"}
             steps {
-                withPythonEnv('/usr/bin/python3.7') {
-                    sh """
-                        python test.py
-                        node test.js
-                    """
-                }
+                sh """
+                    python test.py
+                    node test.js
+                """
             }
         }
     } 
