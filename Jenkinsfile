@@ -23,10 +23,10 @@ pipeline {
             tools {nodejs "okmath-nodejs"}
             steps {
                 sh """
-                    export AWS_PROFILE="default"
                     npm install
                     npm install -g serverless
-                    sls config credentials -p aws --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY} --overwrite
+                    sls config credentials -p aws --profile okmath --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY} --overwrite
+                    export AWS_PROFILE="okmath"
                     sls deploy --stage dev
                 """
             }
