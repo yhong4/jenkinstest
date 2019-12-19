@@ -25,8 +25,7 @@ pipeline {
                 sh """
                     npm install
                     npm install -g serverless
-                    sls config credentials -p aws --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY} --overwrite
-                    export AWS_PROFILE="default"
+                    sls config credentials -p aws --profile okmath --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY} --overwrite
                     sls deploy --stage dev
                 """
             }
@@ -34,8 +33,9 @@ pipeline {
     } 
 
      environment {
-	 		AWS_ACCESS_KEY_ID = "AKIAWDNCMCBIIFJGYY7J"
-			AWS_SECRET_ACCESS_KEY = "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"
+            AWS_PROFILE="okmath"
+	 		AWS_ACCESS_KEY_ID = "AKIAWDNCMCBINHHPGHNA"
+			AWS_SECRET_ACCESS_KEY = "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"
             SERVERLESS_ACCESS_KEY = "AKwdZPwXQBB5f7LVTINd5NIoXO8Wz8WCLxPItcQGHTyJ0"
 	 }
 }
