@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
-    }
+    agent any
 
 
     stages {
@@ -25,6 +20,7 @@ pipeline {
             }
         }
         stage ('Deploy') {
+            tools {nodejs "node"}
             steps {
                 withPythonEnv('/usr/bin/python3.7') {
                     sh """
