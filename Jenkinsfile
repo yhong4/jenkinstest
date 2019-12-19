@@ -23,6 +23,7 @@ pipeline {
             tools {nodejs "okmath-nodejs"}
             steps {
                 sh """
+                    npm install
                     sls deploy
                 """
             }
