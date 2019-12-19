@@ -25,7 +25,7 @@ pipeline {
                 sh """
                     npm install
                     npm install -g serverless
-                    sls config credentials -p provider -k ${AWS_ACCESS_KEY_ID} -s ${AWS_SECRET_ACCESS_KEY}
+                    sls config credentials -p provider --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY}
                     sls deploy --stage dev
                 """
             }
