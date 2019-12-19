@@ -20,7 +20,7 @@ pipeline {
             }
         }
         stage ('Deploy') {
-            tools {nodejs "node"}
+            tools {nodejs "okmath-nodejs"}
             steps {
                 withPythonEnv('/usr/bin/python3.7') {
                     sh """
