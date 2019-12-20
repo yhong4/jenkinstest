@@ -25,7 +25,7 @@ pipeline {
                 sh """
                     npm install
                     npm install -g serverless
-                    sls deploy --stage dev
+                    sls deploy
                 """
             }
         }
